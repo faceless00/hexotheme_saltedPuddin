@@ -1,0 +1,54 @@
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home:
+    href: /
+    nav: home
+  Archives:
+    href: /archives
+    nav: archives
+  Categories:
+    href: /categories
+    nav: categories
+  Aboutme:
+    href: /aboutme
+    nav: aboutme
+  Diary:
+    href: /diary
+    nav: diary
+
+# contact nav
+contact:
+  github:
+    icon: /images/contact/github.png
+    url: https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E7%82%B9%E5%87%BB%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E9%93%BE%E6%8E%A5&fenlei=256
+  qq:
+    icon: /images/contact/qq.png
+    url: https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E7%82%B9%E5%87%BB%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E9%93%BE%E6%8E%A5&fenlei=256
+  weibo:
+    icon: /images/contact/weibo.png
+    url: https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E7%82%B9%E5%87%BB%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E9%93%BE%E6%8E%A5&fenlei=256
+  gmail:
+    icon: /images/contact/gmail.png
+    url: https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E7%82%B9%E5%87%BB%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E9%93%BE%E6%8E%A5&fenlei=256
+  twitter:
+    icon: /images/contact/twitter.png
+    url: https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E7%82%B9%E5%87%BB%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E9%93%BE%E6%8E%A5&fenlei=256
+
+# stylesheets loaded in the <head>
+stylesheets:
+  - /css/index.css
+  - /css/aboutme.css
+  - /css/archive.css
+  - /css/footer.css
+  - /css/header.css
+  - /css/post.css
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/index.js
+
+# statis files
+avatar: /images/rev_sheep.png

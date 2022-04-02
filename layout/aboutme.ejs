@@ -1,0 +1,23 @@
+<%- css('/css/aboutme.css') %>
+<%- js('/js/aboutme.js') %> 
+
+<div id="container">
+  <img
+    src="/images/rev_sheep.png"
+    id="mainIcon"
+    class="icon"
+    onclick="reverseIcon()"
+  />
+  <div id="signature">
+    almost salted
+  </div>
+  <div id="contactPart">
+    <% const keys=Object.keys(theme.contact); %>
+    <% for (let i in keys){ %>
+    <div class="contactItem">
+      <img src="<%= theme.contact[keys[i]].icon %>" />
+      <a href="<%= theme.contact[keys[i]].url%>"><%= keys[i] %></a>
+    </div>
+    <% } %>
+  </div>
+</div>

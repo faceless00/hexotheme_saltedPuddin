@@ -1,0 +1,11 @@
+<%- css('/css/header.css') %>
+
+<div class="topBar">
+  <img class="icon" src="<%= theme.avatar %> " />
+  <div class="menu">
+    <% for (let i in theme.menu){ %> <% let m=theme.menu[i] %>
+    <a href="<%- url_for(m.href) %> "><%= m.nav %></a>
+    <% } %>
+  </div>
+</div>
+<div class="blank"></div>

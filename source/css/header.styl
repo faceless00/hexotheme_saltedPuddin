@@ -1,0 +1,43 @@
+:root
+    --light-topBar-background-color rgba(0,0,0,0.92)
+    --light-topBar-color #f5f5f7
+    --light-topBar-menu-hover-color white
+.topBar
+  position fixed
+  top 0
+  left 0
+  height 3rem
+  width 100%
+  background var(--light-topBar-background-color)
+  z-index 99
+  display flex
+  align-items center
+  padding 0 10px 0 10px
+  font-family Monospace
+  font-size 1.1em
+  box-shadow 0 2px 5px rgba(0,0,0,0.92)
+
+.topBar .icon
+  max-height 80%
+  margin-right 5px
+  transition max-height 1s
+.topBar .icon:hover
+  max-height 95%
+  transition max-height 1s
+
+.topBar .menu
+  margin-left auto
+  margin-right 20px
+.topBar .menu a
+  margin 0 10px 0 10px
+  padding 10px
+  text-decoration none
+  color var(--light-topBar-color)
+  opacity .8
+  transition opacity,font-size .5s
+.topBar .menu a:hover
+  opacity 1
+  font-size 1.1em
+  transition all .5s
+.blank
+  margin-top 4em

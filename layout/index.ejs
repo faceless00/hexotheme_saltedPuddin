@@ -1,0 +1,23 @@
+<%- css('/css/index.css') %>
+
+<div class="postListContainer">
+  <% page.posts.forEach(post=>{ %>
+  <div class="postItem">
+    <a class="postItemTitle" href="<%= url_for(post.path) %> ">
+      <%= post.title %>
+    </a>
+    <div class="postItemDate">
+      <img class="dateIcon" src="/images/calendar.svg" />
+      <p style="display: inline; color: grey">
+        posted on <%= date(post.date,'YYYY.M.D') %>
+      </p>
+    </div>
+    <div class="postItemExcerpt">
+      <article><%- post.excerpt %></article>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<div class="indexPaginator">
+  <%- paginator({ prev_text:"<", next_text:">" }) %>
+</div>

@@ -1,0 +1,16 @@
+<%- css('/css/post.css') %>
+
+<div id="post">
+  <div id="postHead">
+    <h1><%=page.title%></h1>
+    <div class="postDate">
+      <img class="dateIcon" src="/images/clockicon.svg" />
+      <%= date(page.date,'--YYYY.M.D') %>
+    </div>
+  </div>
+  <div id="postBody">
+    <%-page.more%>
+  </div>
+</article>
+
+<div id="paginator"><%-paginator()%></div>

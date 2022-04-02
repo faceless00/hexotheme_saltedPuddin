@@ -1,0 +1,28 @@
+<%- css('/css/categories.css') %>
+
+<%
+const categoriesList = list_categories({ show_count: false });
+const tagsList = list_tags({ show_count: false });
+%>
+
+<div id="container">
+    <div id="categoryPart">
+        <h2>categories</h2>
+        <% if (categoriesList !== "") { %>
+            <%-categoriesList%>
+          <% } else { %>
+            <p>None.</p>
+          <% } %>
+    </div>
+    <div id="tagPart">
+        <h2>Tags</h2>
+        <% if (tagsList !== "") { %>
+          <%-tagsList%>
+        <% } else { %>
+          <p>None.</p>
+        <% } %>
+    </div>
+</div>
+
+
+

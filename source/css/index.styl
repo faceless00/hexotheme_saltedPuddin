@@ -1,0 +1,83 @@
+:root
+    --light-main-background-color rgba(0,0,0,0.92)
+    --light-main-color #f5f5f7
+    --index-font-family "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif"
+    --chocolate rgba(40, 25, 25, 0.9)
+body
+  margin 0
+  color var(--light-main-color)
+  font-family var(--index-font-family)
+.postListContainer .postItem
+  max-height 200px
+  max-width 60%
+  margin 10px auto 20px auto
+  padding 20px 20px 30px 20px
+  background var(--chocolate)
+  border-radius 10px
+
+.postListContainer .postItem > a
+  color var(--light-main-color)
+  font-size 1.5em
+  text-decoration underline solid #9ed09e 3px
+  display block
+  transition opacity,font-size 0.5s
+  opacity .9
+
+.postListContainer .postItem > a:hover
+  font-size 2em
+  opacity 1
+  transition opacity,font-size 0.5s
+
+.postListContainer .postItem .postItemDate
+  margin-top 0.5rem
+.postListContainer .postItem .postItemDate .dateIcon
+  margin-right 2px
+  max-height 1em
+
+.postListContainer .postItem .postItemExcerpt a
+  color var(--light-main-color)
+  text-decoration underline solid cadetblue 2px
+  opacity .8
+  transition opacity,font-size 0.4s
+
+.postListContainer .postItem .postItemExcerpt a:hover
+  opacity 1
+  font-size 1.1em
+  transition opacity,font-size 0.4s
+
+.postListContainer .postItem .postItemExcerpt a:visited
+  color rgb(129, 172, 189)
+
+.indexPaginator::before
+  content ""
+  display inline-block
+  color black
+  background-image url("/images/book.svg")
+  background-size 1em 1em
+  width 1em
+  height 1em
+
+.indexPaginator
+  text-align center
+  font-family "Arial"
+  margin-bottom 5rem
+
+.indexPaginator span,a
+  margin 0 10px 0 10px
+  color var(--light-main-color)
+.indexPaginator span
+  font-size 1.3rem
+
+.indexPaginator a
+  color royalblue
+  opacity .8
+  text-decoration none
+  transition opacity,font-size 0.4s
+
+.indexPaginator a:hover
+  font-size 1.3rem
+  opacity 1
+  transition opacity,font-size 0.4s
+
+.indexPaginator a:visited
+  color royalblue

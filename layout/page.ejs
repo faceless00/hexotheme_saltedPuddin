@@ -1,0 +1,10 @@
+
+<% if (page.title==="aboutme"){ %>
+  <%- partial('aboutme') %> 
+<%} else if (page.title==="archive"){%>
+  <%- partial('archive') %>
+<%} else if (page.title==="diary"){%>
+  <%- partial("diary") %>
+<%} else if (page.title==="categories"){ %>
+  <%- partial("categories") %>
+<% } %>
