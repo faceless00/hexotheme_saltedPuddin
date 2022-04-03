@@ -1,10 +1,49 @@
 :root
     --post-font-family "Monospace","SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif"
+    --navigator-background-color #241d1d
 #post
     font-family var(--post-font-family)
-    color #f5f5f7
+    color var(--main-color)
 
-#post > *
+aside
+    box-sizing border-box
+    width 15%
+    margin-bottom 1em
+    background var(--navigator-background-color)
+    color black
+    border-radius 10px
+    position fixed
+    left 0
+    overflow auto
+
+#navigator ol
+    list-style none
+    padding 0 0 0 8px
+
+aside ol li
+    list-style none
+
+aside .anchor-item
+    margin 10px
+
+aside .anchor-number
+    display none
+
+aside .anchor-item a
+    text-decoration none
+    color var(--main-color)
+    opacity .8
+    transition opacity,font-size 0.5s
+
+aside .anchor-item a:hover
+    font-size 1.3em
+    opacity 1
+    transition opacity,font-size 0.5s
+
+
+aside .anchor-item a
+
+#content
     max-width 60%
     margin 5px auto 5px auto
 

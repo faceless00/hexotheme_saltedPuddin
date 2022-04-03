@@ -1,15 +1,21 @@
 <%- css('/css/post.css') %>
+<%- js('/js/post.js') %>
 
 <div id="post">
-  <div id="postHead">
-    <h1><%=page.title%></h1>
-    <div class="postDate">
-      <img class="dateIcon" src="/images/clockicon.svg" />
-      <%= date(page.date,'--YYYY.M.D') %>
+  <aside id="navigator">
+    <%- toc(page.content,{class:"anchor"}) %>
+  </aside>
+  <div id="content">
+    <div id="postHead">
+      <h1><%=page.title%></h1>
+      <div class="postDate">
+        <img class="dateIcon" src="/images/clockicon.svg" />
+        <%= date(page.date,'--YYYY.M.D') %>
+      </div>
     </div>
-  </div>
-  <div id="postBody">
-    <%-page.more%>
+    <div id="postBody">
+      <%-page.more%>
+    </div>
   </div>
 </article>
 
