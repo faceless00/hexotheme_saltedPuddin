@@ -1,10 +1,31 @@
 <%- css('/css/archive.css') %> 
 
 <%
-const archivesList = list_archives({ show_count: false });
-const posts=list_posts({amount:5})
+let pre_year="";
+let pre_month="";
 %>
 
-<div>
-  <%- posts %>
+<div id="archives">
+  <% page.posts.data.forEach(post=>{ %>
+    <% if (!pre_year || pre_year!==date(post.date,"YYYY")){
+      pre_year=date(post.date,"YYYY");
+      pre_month=date(post.date,"MM");
+    %>
+      <h1 class="year"><%= pre_year %></h1>
+      <h2 class="month"><%= pre_month %></h2>
+    <%
+    } else if (pre_month!==date(post.date,"MM")){
+      pre_month=date(post.date,"MM");
+    %>
+      <h2 class="month"><%= pre_month %></h2>  
+    <% } %>
+    <div class="post">
+      <img src="/images/clockicon.svg" class="clockIcon" >
+      <p class="postDate"><%= date(post.date,"MM-DD") %></p>
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a> 
+    </div>
+  <% }) %>
+</div>
+<div id="paginator">
+  <%- paginator({prev_text: '<',next_text: '>'}) %>
 </div>
