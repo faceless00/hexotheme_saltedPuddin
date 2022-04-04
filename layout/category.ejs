@@ -1,19 +1,8 @@
 <%- css('/css/category.css') %>
 
-<div id="category">
-  <h1><%=page.category%></h1>
-  <% page.posts.forEach(article => { %>
-    <div class="category-item">
-      <a href="<%=url_for(article.path)%>">
-        <%=article.title%>
-      </a>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
-    </div>
-  <% }); %>
+<div id="headPart">
+  <h2 class="title"><%= page.category %></h2>
 </div>
-
-<div id="paginator">
-  <%-paginator()%>
+<div id="bodyPart">
+  <%- partial('archive') %>
 </div>
