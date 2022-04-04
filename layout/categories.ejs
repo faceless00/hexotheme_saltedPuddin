@@ -1,26 +1,34 @@
 <%- css('/css/categories.css') %>
 
 <%
-const categoriesList = list_categories({ show_count: false });
-const tagsList = list_tags({ show_count: false });
+const categoriesList = list_categories({show_count: false });
+const tagsList = list_tags({show_count: false });
 %>
 
 <div id="container">
     <div id="categoryPart">
-        <h2>categories</h2>
+      <div class="categoryHead headPart">
+        <h2 class="title">categories</h2>
+      </div>
+      <div class="linkPart">
         <% if (categoriesList !== "") { %>
-            <%-categoriesList%>
-          <% } else { %>
-            <p>None.</p>
-          <% } %>
+          <%-categoriesList%>
+        <% } else { %>
+          <p>果咩,目前还没有分类</p>
+        <% } %>
+      </div>
     </div>
     <div id="tagPart">
-        <h2>Tags</h2>
+      <div class="tagHead headPart">
+        <h2 class="title">Tags</h2>
+      </div>
+      <div class="linkPart">
         <% if (tagsList !== "") { %>
           <%-tagsList%>
         <% } else { %>
-          <p>None.</p>
+          <p>果咩,目前还没有标签</p>
         <% } %>
+      </div>
     </div>
 </div>
 

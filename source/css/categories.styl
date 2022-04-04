@@ -1,0 +1,51 @@
+#container
+    max-width 90%
+    margin 2rem auto 4rem auto
+
+#container .headPart
+    display flex
+    justify-content flex-start
+    align-items center
+
+#categoryPart .categoryHead::before
+    content ""
+    display inline-block
+    background-image url("/images/category.svg")
+    background-size 2rem 2rem
+    height 2rem
+    width 2rem
+    margin-right 1rem
+
+#container .title
+    display inline-block
+
+
+#tagPart .tagHead::before
+    content ""
+    display inline-block
+    background-image url("/images/tag.svg")
+    background-size 2rem 2rem
+    height 2rem
+    width 2rem
+    margin-right 1rem
+
+.linkPart ul,.linkPart li
+    list-style none
+
+.linkPart li
+    display inline-block
+
+.linkPart a
+    text-decoration none
+    background var(--main-code-background-color)
+    padding 10px
+    margin 2rem
+    border-radius 5px
+    opacity .8
+    transition opacity,font-size 0.5s
+
+.linkPart a:hover
+    font-size 1.4em
+    color #f4e9aa
+    opacity 1
+    transition opacity,font-size 0.5s
