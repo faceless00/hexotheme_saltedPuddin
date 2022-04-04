@@ -34,16 +34,25 @@ function onScroll() {
   //   console.log("height:", window.scrollY);
   if (titles && anchors) {
     if (
-      // scroll_down 窗口下滑
-      (window.scrollY >= titles[cur_title].offsetTop &&
-        cur_title < titles.length) || //避免最后一个标题之后仍然触发
       document.documentElement.scrollTop + //如果滚动到底还是不能触发最后一个anchor,再滚动的时候就触发
         document.documentElement.clientHeight >=
-        document.documentElement.scrollHeight
+      document.documentElement.scrollHeight
+    ) {
+      if (cur_anchor <= anchors.length - 2) {
+        const preAnchor = cur_anchor;
+        cur_anchor = anchors.length - 1;
+        cur_title = titles.length - 1;
+        deactiveAnchor(anchors[preAnchor]);
+        activeAnchor(anchors[cur_anchor]);
+      }
+    } else if (
+      // scroll_down 窗口下滑
+      window.scrollY >= titles[cur_title].offsetTop &&
+      cur_title < titles.length //避免最后一个标题之后仍然触发
     ) {
       const preAnchor = cur_anchor;
       while (
-        cur_title + 1 < titles.length &&
+        cur_title <= titles.length - 2 &&
         window.scrollY >= titles[cur_title + 1].offsetTop
       ) {
         cur_title++;
