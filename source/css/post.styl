@@ -55,6 +55,30 @@ aside .anchor-item a
   margin-right 2px
   max-height 1em
 
+#postHead .postCategory
+    margin 1rem 1rem 1rem 0
+
+#postHead .postCategory::before
+    content ""
+    background-image url("/images/category.svg")
+    background-size 1em 1em
+    width 1em
+    height 1em
+    display inline-block
+
+
+#postHead .postCategory > a
+    text-decoration none
+    background var(--main-code-background-color)
+    padding 5px
+    border-radius 5px
+    opacity .8
+    transition opacity 0.5s
+
+#postHead .postCategory > a:hover
+    opacity 1
+    transition opacity 0.5s
+
 #postHead::after
     content ""
     display block
@@ -65,5 +89,5 @@ aside .anchor-item a
 
 
 #postBody
-    margin 10px auto 10px auto
+    margin 10px auto 5rem auto
     font-size 1.1rem

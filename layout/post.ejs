@@ -12,11 +12,16 @@
         <img class="dateIcon" src="/images/clockicon.svg" />
         <%= date(page.date,'--YYYY.M.D') %>
       </div>
+        <% if(page.categories.length>0){
+          page.categories.data.forEach(category=>{
+        %>
+        <div class="postCategory">
+            <a href="<%- url_for(category.path) %>"><%= category.name %></a>
+        </div>
+        <%  })} %> 
     </div>
     <div id="postBody">
       <%-page.more%>
     </div>
   </div>
 </article>
-
-<div id="paginator"><%-paginator()%></div>
