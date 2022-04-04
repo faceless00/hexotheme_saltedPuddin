@@ -12,6 +12,11 @@
         posted on <%= date(post.date,'YYYY.M.D') %>
       </p>
     </div>
+    <div class="postItemTags">
+      <% post.tags.data.forEach(tag=>{ %>
+        <a href="/tags/<%=tag.name%>">#<%= tag.name %> </a>
+      <% }) %>
+    </div>
     <div class="postItemExcerpt">
       <article><%- post.excerpt %></article>
     </div>

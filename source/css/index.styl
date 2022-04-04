@@ -7,6 +7,8 @@ body
   margin 0
   color var(--light-main-color)
   font-family var(--index-font-family)
+
+
 .postListContainer .postItem
   max-height 200px
   max-width 60%
@@ -28,11 +30,26 @@ body
   opacity 1
   transition opacity,font-size 0.5s
 
+
 .postListContainer .postItem .postItemDate
-  margin-top 0.5rem
+  margin 0.5rem 0 0.5rem 0
+
 .postListContainer .postItem .postItemDate .dateIcon
   margin-right 2px
   max-height 1em
+
+
+.postListContainer .postItem .postItemTags > a
+  text-decoration none
+  margin 5px
+  border-radius 5px
+  opacity .8
+  transition opacity,font-size 0.5s
+.postListContainer .postItem .postItemTags > a:hover
+  opacity 1
+  font-size 1.1em
+  transition opacity,font-size 0.5s
+
 
 .postListContainer .postItem .postItemExcerpt a
   color var(--light-main-color)
@@ -48,6 +65,7 @@ body
 .postListContainer .postItem .postItemExcerpt a:visited
   color rgb(129, 172, 189)
 
+
 .indexPaginator::before
   content ""
   display inline-block
@@ -62,7 +80,7 @@ body
   font-family "Arial"
   margin-bottom 5rem
 
-.indexPaginator span,a
+.indexPaginator span,.indexPaginator a
   margin 0 10px 0 10px
   color var(--light-main-color)
 .indexPaginator span
