@@ -1,0 +1,46 @@
+#container
+    max-width 90%
+    margin 2rem auto 4rem auto
+
+#container #headPart
+    display flex
+    justify-content flex-start
+    align-items center
+
+#container #headPart::before
+    content ""
+    display inline-block
+    background-image url("/images/diary.svg")
+    background-size 2rem 2rem
+    height 2rem
+    width 2rem
+    margin-right 1rem
+
+#content h1
+    max-width 10%
+    padding 10px
+    border-radius 10px
+    color #fff1a3b8
+    background #527475
+
+#content h2
+    max-width 6%
+    padding 10px
+    border-radius 10px
+    color rgb(176, 198, 72)
+    background #526875
+    margin-left 5px
+#content h3
+    max-width 5%
+    padding 10px
+    border-radius 10px
+    color rgba(41, 168, 244, 0.92)
+    background #3b6c4ed9
+    margin-left 10px
+
+#content blockquote
+    opacity .8
+    transition opacity 0.5s
+#content blockquote:hover
+    opacity 1
+    transition opacity 0.5s
