@@ -12,12 +12,22 @@
     almost salted
   </div>
   <div id="contactPart">
-    <% const keys=Object.keys(theme.contact); %>
-    <% for (let i in keys){ %>
-    <div class="contactItem">
-      <img src="<%= theme.contact[keys[i]].icon %>" />
-      <a href="<%= theme.contact[keys[i]].url%>"><%= keys[i] %></a>
-    </div>
-    <% } %>
+    <% const keys=Object.keys(theme.contact);
+    for (let i in keys){
+      if(theme.contact[keys[i]].icon==="/images/contact/gmail.png"){ %>
+        <div class="contactItem">
+          <img src="<%= theme.contact[keys[i]].icon %>" />
+          <a onclick="handleEmailClick()">
+            <%= keys[i] %>
+          </a>
+        </div>
+    <% } else { %>
+      <div class="contactItem">
+        <img src="<%= theme.contact[keys[i]].icon %>" />
+        <a href="<%= theme.contact[keys[i]].url%>">
+          <%= keys[i] %>
+        </a>
+      </div>
+    <% }} %>
   </div>
 </div>
