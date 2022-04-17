@@ -9,7 +9,7 @@ const deactiveProps = {
   color: "#f5f5f7",
 };
 const activeProps = {
-  fontSize: "1.3em",
+  fontSize: "1.2em",
   opacity: "1",
   color: "dodgerblue",
 };
