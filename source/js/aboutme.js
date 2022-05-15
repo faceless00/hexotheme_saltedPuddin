@@ -18,5 +18,5 @@ function reverseIcon() {
 }
 
 function handleEmailClick() {
-  window.alert("email: faceless0230@gmail.com\n没事别联系,有事最好也别联系");
+  window.alert("email: lies@mail.com\n没事别联系,有事最好也别联系");
 }
